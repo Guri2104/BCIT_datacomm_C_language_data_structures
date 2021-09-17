@@ -46,7 +46,7 @@ size_t dc_tree_size( dc_tree_node * tree ) {
     if ( !tree ) {
         return 0;
     }
-    return dc_tree_height( tree->left ) + dc_tree_height( tree->right ) + 1;
+    return dc_tree_size( tree->left ) + dc_tree_size( tree->right ) + 1;
 }
 
 int dc_tree_is_leaf( dc_tree_node * tree ) {
